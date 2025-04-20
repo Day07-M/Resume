@@ -1,0 +1,48 @@
+.gradient-background {
+  background: linear-gradient(300deg,
+  #F29F58,
+#AB4459,
+#441752,
+#1B1833
+  );
+
+  /*#696969,
+  #ffae00,
+  #c4c1c1,#fce729  */
+  /* google colour pallate 
+  #4285f4,
+  #ea4335,
+  #fbbc05,
+  #34a853 */
+  background-size: 180% 180%;
+  animation: gradient-animation 12s ease-in-out infinite;
+  border-bottom-right-radius: 300px;
+  /* border-bottom-left-radius: 50px; */
+}
+
+.gradient-background2{
+  background: rgba(158, 158, 158, 0.075)
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 100px;
+}
