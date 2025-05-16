@@ -1,14 +1,15 @@
 .gradient-background {
   background: linear-gradient(300deg,
-  #F29F58,
+ #F29F58,
 #AB4459,
 #441752,
 #1B1833
   );
-
-  /*#696969,
-  #ffae00,
-  #c4c1c1,#fce729  */
+ 
+  /* #ffffff,
+#b4b3b4,
+#636263,
+#000000 */
   /* google colour pallate 
   #4285f4,
   #ea4335,
