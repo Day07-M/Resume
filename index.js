@@ -1,4 +1,4 @@
-alert("Hello");
+alert("Welcome");
 // $("button").on("click");
 var count = 0;
 
@@ -20,7 +20,7 @@ $("button").click(function() {
             alert("You sure like clicking this button.");
             break;
         default:
-            alert("That's Enough Clicking For You!")
+            alert("Nuhhh uhhh, That's Enough Clicking For You!")
             $("button").fadeOut();  
             break;
     }
