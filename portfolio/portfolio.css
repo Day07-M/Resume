@@ -1,0 +1,244 @@
+/* :root {
+  --bg-color: #121212;
+  --card-bg: #1f1f1f;
+  --text-color: #ffffff;
+  --accent-color: #f0c000;
+  --border-color: #333;
+}
+
+[data-theme="light"] {
+  --bg-color: #f9f9f9;
+  --card-bg: #ffffff;
+  --text-color: #000000;
+  --accent-color: #e89b00;
+  --border-color: #ccc;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--card-bg);
+  border-bottom: 2px solid var(--border-color);
+  padding: 0.75rem 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+/* Theme Toggle Button */
+/* #theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s;
+} */
+
+/* Project Cards */
+.projects-section {
+  padding: 3rem 1rem;
+  /* background-image: url(/portfolio/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+}
+
+.projects-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-right: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05); /* light glass by default */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  
+  /* for Safari */
+  -webkit-backdrop-filter: blur(12px); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  background-color: var(--card-bg-hover, #292929);
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h2,
+.project-card p {
+  margin: 1rem;
+}
+
+.project-card h2 {
+  color: var(--accent-color);
+}
+
+.btn {
+  margin: 0 1rem 1rem 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d49c00;
+}
+
+/* === Theme Toggle Switch === */
+/* .theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  background-color: var(--border-color);
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  inset: 0;
+  transition: background-color 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+input:checked + .slider::before {
+  transform: translateX(30px);
+} */
+
+/* Icons inside switch */
+/* .slider .icon {
+  position: absolute;
+  top: 3px;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.slider .sun {
+  left: 6px;
+  color: #ffd700;
+}
+
+.slider .moon {
+  right: 6px;
+  color: #f0f8ff;
+} */
+
+/* === Root Variables === */
+:root {
+  --bg-gradient: linear-gradient(135deg, #121212, #1a1a1a);
+  --card-bg: #1f1f1f;
+  --text-color: #ffffff;
+  --accent-color: #f0c000;
+  --border-color: #333;
+}
+
+/* [data-theme="light"] {
+  --bg-gradient: linear-gradient(135deg, #f0f0f0, #ffffff);
+  --card-bg: #ffffff;
+  --text-color: #000000;
+  --accent-color: #e89b00;
+  --border-color: #ccc;
+} */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: background 1s ease, color 0.4s ease;
+  min-height: 100vh;
+}
